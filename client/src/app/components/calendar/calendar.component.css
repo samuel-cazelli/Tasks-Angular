@@ -1,0 +1,31 @@
+body{
+    background-color: #f8f9fa;
+  }
+  
+  .wrapper{
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+.calendar-selected-date{
+    font-weight: bold;
+}
+
+.calendar{
+    width: 100%;
+}
+
+.calendar-day-name{
+    text-align: center;
+}
+
+.calendar-date{
+    cursor: pointer;
+    text-align: center;
+}
+
+.month-year-input{
+    text-align: center;
+}
+
+

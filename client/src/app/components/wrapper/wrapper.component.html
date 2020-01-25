@@ -1,0 +1,7 @@
+<app-calendar 
+[currentMonth]="currentMonthCalendar" 
+[currentYear]="currentYearCalendar" 
+[selectedDate]="selectedDate"
+(onChangeSelectedDate)="handleChangeSelectedDate($event)"
+(onMoveCalendar)="handleMoveCalendar($event)"></app-calendar>
+<app-tasks [selectedDate]="selectedDate"></app-tasks>

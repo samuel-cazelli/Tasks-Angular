@@ -1,0 +1,13 @@
+.wrapper{
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.title-tasks{
+    text-align: center;
+    font-size: 26px;
+}
+.task-name{
+    margin-left: 10px;
+    font-size: 18px;
+}

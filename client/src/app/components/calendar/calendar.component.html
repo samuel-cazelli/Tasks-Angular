@@ -1,0 +1,21 @@
+<div class="wrapper rounded shadow bg-white">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend" (click)="handleMoveCalendarBack()"><span class="input-group-text">&lt;</span></div>
+        <input type="text" class="form-control month-year-input" disabled="" [value]="currentMonth + '/' + currentYear" />
+        <div class="input-group-append" (click)="handleMoveCalendarForward()"><span class="input-group-text">&gt;</span></div>
+    </div>
+
+    <table class="calendar">
+        <tr class="calendar-day-name">
+            <td *ngFor="let weekDay of calendarStructureData.header">{{weekDay}}</td>
+        </tr>
+        <tr *ngFor="let week of calendarStructureData.weeks">
+            <td *ngFor="let day of week" 
+                [ngClass]="{'calendar-date': true, 'calendar-selected-date': day && this.selectedDate && day.toString() === this.selectedDate.toString()}"
+                (click)="handleChangeSelectedDate(day)">
+                {{day | date: 'd'}}
+            </td>
+        </tr>
+    </table>
+</div>
+
