@@ -9,7 +9,7 @@
   <br>
   <form>
       <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Task" name="task-name" #taskName (keydown.enter)="handleTypeEnterAddTask(taskName.value); taskName.value = ''">
+          <input type="text" class="form-control" placeholder="Task" name="task-name" #taskName (keydown.enter)="handleTypeEnterAddTask(taskName.value); taskName.value = ''; $event.preventDefault();">
           <div class="input-group-append"><button class="btn btn-outline-secondary" type="button" (click)="handleClickAddTask(taskName.value); taskName.value = ''">Add</button></div>
       </div>
   </form>
